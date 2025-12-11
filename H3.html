@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New-Era Alkalmazás Dokumentáció</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 40px auto;
+            line-height: 1.6;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #333;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>1. Bevezetés</h1>
+        <p>A New-Era elhozza a tökéletes alkalmazást a football kedvelők számára. Az alkalmazás telefonos és
+            számítógépes rendszereken is működik, hogy felhasználóink minden igényét teljesíteni tudjon. Mivel felhő
+            alapú rendszert használ, nincs szükség nagy tárhelyre és bármilyen készüléken működik az alkalmazás.
+            Emellett statisztikai elemzésekhez, értékelésekhez való egyszerűbb hozzáférést biztosít mindenki számára és
+            a live score funkció segítségével élőben tudjuk követni a mérkőzéseket! Meccsekről felvételt lehet készíteni
+            illetve azt feltölteni vágott vagy teljes de tömörített formában! Az alkalmazás megkülönböztet Premium,
+            Premium Team és ingyenes felhasználókat, akik különböző lehetőségekhez férnek hozzá, attól függően, hogy
+            milyen csomagot vásároltak. Azonban a program alapvető funkciója, a keresés és információ megjelenítés,
+            minden felhasználó számára elérhető.</p>
+
+        <h3>Funkciók</h3>
+        <ul>
+            <li>játékosok, csapatok áttekintése</li>
+            <li>meccsek elemzése, értékelése</li>
+            <li>játekosok, bírók értékelése</li>
+            <li>live score (elő meccs lekövetés)</li>
+            <li>adott csapat hírei (sérülések, másnaposság)</li>
+            <li>videók feltöltése (vágott vagy teljes verzióban)</li>
+            <li>leendő focisták számára egyszerű kapcsolat felvétel a klubbal, edzővel</li>
+            <li>oktató videók a leendő focisták számára</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h1>2. Áttekintés</h1>
+        <p>A kezdeti koncepció az interneten vagy felhőben tárolt kép- és videó fájlok és a hozzájuk tartozó szöveges
+            információk kezelésére összpontosul, mivel ez elengedhetetlen az alkalmazás optimális működéséhez.</p>
+
+        <h3>2.1 Honnan kerülnek hozzám a fájlok</h3>
+        <p>Elsősorban a fejlesztők teszik közzé a képeket és videókat, de mivel az alkalmazás lehetőséget nyújt kép és
+            videók feltöltésére, így a kliensek is közzé tudnak tenni tartalmakat. A feltöltés során minden adatot
+            kötelező megadni, és a feltölteni kívánt képet a megadott formátumban kell elküldeni. A megengedett
+            fájlformátumok közé tartoznak a png, jpg és mp4 típusú fájlok.</p>
+
+        <h3>2.2 Ingyenes felhasználók</h3>
+        <p>Ingyenes felhasználóknak reklámok jelennek meg, melyek általában sporthoz (főleg footballhoz) kapcsolódó
+            termékek lennének.</p>
+
+        <h3>2.3 Prémium felhasználó</h3>
+        <p>Premium felhasználók reklám mentességet kapnak.</p>
+
+        <h3>2.4 Korlátozások</h3>
+        <p>A kezdetleges verziók használata során többféle korlátozást is tapasztaltam a szoftverrel kapcsolatban.
+            Mivel van rá esély, hogy a felhasználók nem jó minőségű, vagy nem alkalmazásokhoz illő képeket és videókat
+            töltenek fel, így ezeket szűrni kell.</p>
+
+        <h3>2.5 Simple Pay szerepe a szoftverben</h3>
+        <p>Mivel az alkalmazás fizetős csomagokat is kínál, így szükség van egy Simple Pay integrációra.</p>
+
+        <h3>2.6 Függőségek</h3>
+        <p>A szoftverfejlesztés menetét számos tényező befolyásolja. Az egyik ilyen tényező a csapat, amelynek tagjai
+            egymás munkájától függnek, mivel feladatokra osztva végzik a munkákat. Ha valaki nem fejezi be időben a
+            saját feladatát, az gátat szabhat a további előrehaladásnak. Emellett a megfelelő tájékoztatás és a
+            marketing is kulcsfontosságú, hogy a program eljuthasson a különböző felhasználói rétegekhez. Továbbá
+            függ az alkalmazás még a felhőtől és a tárhelyszolgáltatóktól is, mivel ha náluk problémák merülnek fel a
+            rendszerben, az
+            komoly problémákat okozhat, akár a program teljes leállását is eredményezheti.</p>
+    </div>
+
+    <div class="card">
+        <h1>3. A rendszer funkciói</h1>
+        <p>Kezdőlap menüje: A kezdőlapból tudunk belépni a Hírek, Nyelv, Segítség, Frissítések és a Bejelentkezési
+            menübe.</p>
+
+        <ul>
+            <li><strong>Hírek:</strong> A hírek menüpontban tudjuk megnézni az aktuális híreket a bajnoksággal és a
+                csapatokkal kapcsolatban.</li>
+            <li><strong>Nyelv:</strong> A nyelv menüpontban tudjuk kiválasztani a nyelveket (magyar, angol, német).</li>
+            <li><strong>Frissítések:</strong> A frissítések menüpontban tudjuk megnézni a patch notes-ot és a közelgő
+                frissítéseket.</li>
+            <li><strong>Support:</strong> A support menüpontban tudjuk felvenni a kapcsolatot a klubbal, vezetőedzővel
+                vagy akár tudunk segítséget kérni az app fejlesztőitől.</li>
+            <li><strong>Bejelentkezési menü:</strong> Itt tudunk belépni a saját fiókunkba, ahol a meccscenter
+                almenüpontból tudunk bejutni a különböző funkciókhoz.</li>
+        </ul>
+
+        <p><strong>Mérkőzések:</strong> A mérkőzések funkcióban tudjuk megtekinteni a különböző meccsek időpontjait.</p>
+        <p><strong>Csapatok:</strong> A csapatok funkcióban tudjuk megnézni az adott bajnokságban szereplő csapatokat.
+        </p>
+        <p><strong>Eredmények:</strong> Az eredmények funkcióban megtekinthetjük a mérkőzések eredményeit,
+            játékoskereteket, felállásokat.</p>
+        <p><strong>Elemzések:</strong> Az elemzések funkcióban olvashatjuk el a meccsek elemzéseit és értékelését a
+            vezetőedzőtől vagy a csapat vezetőjétől.</p>
+        <p><strong>Értékelések:</strong> Az értékelések funkcióban tudunk szavazni a meccs legjobbjáról és tudjuk
+            értékelni a bírót.</p>
+        <p><strong>Videók feltöltése:</strong> A videók feltöltése funkcióban tudjuk feltölteni a meccsről összevágott
+            videót, összefoglalót.</p>
+        <p><strong>Oktató videók (Premium):</strong> Az oktató videók funkcióban a prémium felhasználók tudnak nézni
+            motivációs focis videókat vagy akár oktató videókat nézhetnek a futballal kapcsolatban.</p>
+        <p><strong>Személyes beállítások:</strong> A személyes beállítások pontban tudjuk beállítani a LiveScore
+            funkciót vagy akár itt tudjuk módosítani az e-mail címet és a jelszót.</p>
+
+        <h3>3.1 Főbb funkciók Use-Case diagrammal</h3>
+        <p>(Itt lehetne diagramot beszúrni, pl. <code>&lt;img src="usecase.png"&gt;</code>)</p>
+
+    </div>
+    <div class="card">
+        <h1>4. Használhatóság</h1>
+        <p>Alkalmazás legfőbb célja és alapköve a gyors, felhasználóbarát élmény megteremtése. A könnyű kezelhetőség
+            és sebesség teszi a New Era-t különlegessé. Nagyon fontos, hogy a különböző felhasználói rétegek
+            ugyanabban az élményben részesüljenek. Ahhoz, hogy minden felhasználó ugyanakkora hatékonysággal tudja
+            működtetni a programot, egy egyszerű és letisztult felhasználói környezetre van szükség. Egy ilyen modern
+            stílusú GUI-val akár a technológiában kevésbé jártas idősebb korosztályt is elérhetjük, köszönhetően annak,
+            hogy minden korosztály digitalizált. Szeretném, hogy a számítástechnikában kevésbé jártas felhasználók
+            ugyanolyan gyorsan tanuljon bele a program fortélyaiba, mint egy már tapasztalt user.</p>
+
+        <p>Továbbá 0-24 elérhető online support és beépített tippek/trükkök és súgó füllel szeretném áthidalni a két
+            tábor közötti szakadékot. Első telepítéskor a program megkérdezi, hogy egyszerű userként szeretnénk belépni
+            vagy edzőként esetleg bíróként. Minden felhasználó réteget más és más GUI várja majd, hiszen egyszerű
+            felhasználóként, bíróként és edzőként is másra használjuk a programot. Egy egyszerű felhasználónak nem lesz
+            szüksége olyan funkciókra, mint a bíróknak vagy edzőknek, így ők egy más GUI-t fognak találni bejelentkezés
+            után.</p>
+
+        <p>Ha kíváncsiak vagyunk pár információra vagy adatra egy adott játékosról vagy csapatról akkor akár több 10
+            percet is eltölthetünk különböző oldalakon mire megtaláljuk a megfelelő információt. De ez sem minden
+            esetben borítékolja a hiteles és pontos információt. Azonban a New Era mindig naprakész információkkal
+            szolgál és nem hagyja cserben a felhasználókat, mindezt úgy, hogy alig pár perc alatt megtaláljuk, amit
+            keresünk.</p>
+
+        <p>Az alkalmazás első megnyitásakor egy tutorial fog minket végig kalauzolni az alkalmazáson, amivel lépésről
+            lépésre végig tudunk menni az alkalmazás fő részein pár lépésben és le is írja, hogy mi mire való. Ezt a kis
+            tutorialt át is lehet ugrani, de javaslatos, hogy a gördülékeny használat érdekében mindenki pörgesse
+            végig, ha esetleg véletlenül mégis átugrottuk akkor pánikra semmi ok, hiszen a bal alsó sarokba a kis „?”
+            ikonra kattintva újra előhozhatjuk a tutorialt, ami akkor is hasznos lehet, ha valamit elfelejtett a
+            felhasználó. A „?” -re kattintva írhatunk e-mail a supportnak és megnézhetjük a bemutató videókat az egyes
+            funkciókról. Készül majd az alkalmazáshoz egy videósorozat a YouTube-ra, ami ingyenesen megtekinthető ezzel
+            is segítve a felhasználókat. Mivel a program nem igényel nagy tudást így a megjelenésig nem tervezek
+            komolyabb útmutatót hozzá. Az edzők számára egy hasznos funkciót tettünk elérhetővé. Az edzők a
+            nyilatkozatokat akár be is importálhatóak az alkalmazásba a Word dokumentumból.</p>
+    </div>
+
+    <div class="card">
+        <h1>5. Megbízhatóság</h1>
+        <p>Tökéletes telepítés után, megfelelő Android vagy IOS rendszer esetén: A szoftvernek több mint tökéletesnek
+            kell lennie, ha olyan telefonon futtatjuk, ami kielégíti a rendszerkövetelményeket. Nyilvánvalóan a program
+            egyik fő kritériuma az internet kapcsolat megléte. Ha ez a kapcsolat nem áll fenn akkor csak a fizikai
+            tárhelyen lévő fájlokból tud dolgozni a program.</p>
+
+        <p>Minden frissítés kiadása előtt újra le kell ellenőrizni a funkciók stabilitását, nem engedhetjük meg
+            magunknak, hogy egy-egy frissítés rossz hatással legyen a programra, ezzel stabilitási gondot okozva a
+            szoftvernek. Fontos, hogy az előfizető tudja, hogy biztonságban van a PayPal vagy Simple Pay fiókja fizetés
+            közben. Zökkenőmentesnek kell lennie a fizetésnek a prémium felhasználó élményért. A felhasználónak
+            mindössze annyi a dolga, hogy a mobil készülékén a megfelelő verziójú Android, illetve IOS szoftver legyen,
+            valamint aktív internet kapcsolattal rendelkezzen, ha a programot online akarja használni.</p>
+
+        <p>Esetleges hibák:</p>
+        <ul>
+            <li>Android vagy IOS megfelelő verziójának hiánya: A programban bizonyos funkciók bebuggolhatnak, vagy
+                esetleg teljesen ki is eshetnek, ezzel a program teljesen összeomolhat vagy bizonyos részei
+                működésképtelenné válhatnak.</li>
+            <li>Nem teljesül a minimális rendszerkövetelmény: Alkalmazás nem indul el, vagy esetleges szaggatásokat és
+                nagyobb várakozási időket lehet tapasztalni.</li>
+            <li>Frissítési hibák: A szoftver folyamatos fejlesztés alatt áll így gyakoriak a frissítések. Ezeket össze
+                kell hangolni a már meglévő dolgokkal, hogy ne okozzon kompatibilitási problémát. Frissítésnél
+                előfordulhat még a nem tökéletesen letöltött frissítésből származó hibák. Viszont, ha a szerveren folyik
+                karbantartás/frissítés akkor a szolgáltatás átmenetileg szünetel.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h1>6. Teljesítmény</h1>
+        <p>Abban az esetben, ha telefonunk megfelel a rendszerkövetelménynek és megfelelő internetkapcsolatunk van,
+            akkor a válaszidő nagyon alacsony lesz. Amíg a felhő alapú rendszer stabilan működik, nem lesz probléma a
+            sebességgel. Az alkalmazás optimalizálása is fontos, ezért folyamatos patchek fognak érkezni az
+            alkalmazáshoz, ezzel javítva az esetleges hibákat.</p>
+
+        <p>Az alkalmazáson belül mindig jelezni fogom a következő patch dátumát és hogy mit fog tartalmazni. A Cloud és
+            a szerver válaszideje nagyon alacsony lesz, mivel a bérelt gépek nagyon gyorsak és megfelelő sávszélességet
+            biztosítanak. Az adatbázisban több 100 kép/videó szerepel a játékosokról és meccsekről. Ehhez biztosítani
+            kell minimum 3TB háttértárat. A jövőben folyamatosan bővíteni kell az adatbázisokat, ennek megfelelően a
+            háttértár méretét is növelni kell majd. A gyors szervereknek köszönhetően egyidejűleg akár 7.000
+            felhasználó is használhatja a szolgáltatásokat. Abban az esetben, ha nincs internet elérése a
+            felhasználónak, biztosítani kell számára az offline meccs nézését, ehhez azonban arra van szükség, hogy az
+            adott
+            meccs le legyen töltve a készülékre.</p>
+
+        <p><strong>Minimum rendszerkövetelmény:</strong></p>
+        <ul>
+            <li>CPU: Dual-Core 1.84 GHz</li>
+            <li>RAM: 2 GB</li>
+            <li>Tárhely: 5 GB</li>
+            <li>OS: Android 10 / IOS 15</li>
+            <li>Internet kapcsolat szükséges a felhő alapú szolgáltatásokhoz</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h1>7. Támogatottság</h1>
+        <p>Nagyon fontos, hogy átlátható kódokkal dolgozzunk, mivel nagyon reménykedek benne, hogy lesz kereslet a
+            program iránt és igy, ha bizonyos bővítések szükségesek azokat egyszerűbben és gyorsabban lehessen hozzáadni
+            az eddigi programkódhoz</p>
+
+        <p>
+            <strong>Maga a szoftver:</strong>
+            A program C# nyelven íródik. Későbbiekben fejlesztendő, így ezek szabványát kell követni. Minden részhez külön
+            dokumentáció készül, hogy nyomon követhető legyen melyik funkció mit csinál. Ezeket a dokumentumokat egy
+            felhő alapú tárolóhelyen őrzöm. A programkódba pedig magyarázó kommenteket tervezek belerakni, a könnyebb
+            átláthatóság, illetve
+            érthetőség miatt.
+        </p>
+
+        <p>
+            <strong>Főbb követési pontok: </strong>
+        <ul>
+            <li>Konstansok nevei nagy betűkkel írva</li>
+            <li>A metódusok kisbetűvel kezdődnek és minden a metódus néven belüli új szónagybetűvel</li>
+            <li>Az interfészek nevei előtt nagy I betű</li>
+            <li>Beszedés változónevek</li>
+            <li>stb.</li>
+        </ul>
+        </p>
+
+        <p>
+            Az alkalmazás működése során a felhasználó fel tudja venni a kapcsolatot a fejlesztőkkel egy erre külön
+            biztosított képernyőfelületen, ahol 3 menüpont közül lehet választani -
+            „visszajelzés”
+            , „segítség”
+            , illetve „kapcsolatfelvétel”
+            . Akár hibabejelentés szempontjából, ötletadás szempontjából, így próbálok minden felhasználói igényt
+            kielégíteni. Az esetlegesen előforduló hibákat a program logolja, amelyből lehet következtetni a hibára. A
+            kód írása közben fellépő hibákat a C# debuggerei segítségével találhatjuk meg.
+        </p>
+
+        <p>
+            <strong>Hardver: </strong>
+            Feltételezhető, hogy program széles körben lesz használva így, a problémamegelőzés érdekében, fontos
+            lenne egy biztonsági szerver, ha valamiért az eredeti leállna vagy bármilyen probléma adódna. Erre egy külön
+            alkalmazott figyelne, aki naponta többször ellenőrizné és karbantartaná a szervert
+        </p>
+
+        <p>
+            <strong>Tervezési korlátozások:</strong>
+            Az alkalmazást az objektum orientált programozási alapelvek betartásával készül. A
+            program megalkotásához a ,,vízesés” modell tűnik a legalkalmasabbnak. A cél, hogy a fejlesztés zökkenőmentesen
+            haladhasson. 
+            Ki kellett gondolnom mindent, mielőtt bármibe is belekezdtem volna. Amint elértem
+            az implementációs szintet, egyesével kell megalkotni meg a különálló
+            osztályokat. A ,,vízesés” modell hátránya itt mutatkozik meg, hiszen ekkor már nagyon nehéz változásokat
+            eszközölni a rendszerbe. Ezért fontos, hogy nagy összhangban dolgozzon egy
+            csapat, hiszen a tervezésnél egy kisebb hiba is káoszt eredményezhet.
+        </p>
+
+        <p>
+            Mobil platformon fog megjelenni az alkalmazás, IOS, illetve Android szoftveren is. A webes
+            felület megszerkesztéséhez HTML nyelvet, illetve CSS-t fogunk használni. Az adatbázis kezeléséhez SQL
+            lekérdező nyelvet alkalmazunk.
+        </p>
+
+        <p>
+            <strong>Fejlesztőeszközök</strong>
+        <ul>
+            <li>Visual Studio 2022: mobil platformra történő fejlesztés</li>
+            <li>Visual Studio Code: webes kódok készítése</li>
+            <li>Microsoft Office: statisztika készítés</li>
+        </ul>
+
+        </p>
+
+        <p>
+            A kód újrafelhasználhatósága szóba jöhet, mivel kétféle mobil platformon IOS-re és Androidra is megjelenik,
+            viszont egy programnyelvben íródik a program, objektum orientált nyelven, ezért használható ugyanaz a
+            kódrészlet másik környezetben.
+        </p>
+
+        <p>
+            <strong>Online dokumentáció és Support rendszer: </strong>
+            A menüsáv rendelkezik egy „Support” nevű ponttal, ami további menüpontokra bontódik.
+        <ul>
+            <li>
+                <strong>Visszajelzés</strong>
+                Ide várom az esetlegesen felfedezett hibákat és a szükséges változtatások, illetve a pozitív és negatív
+                visszajelzéseket is.
+            </li>
+            <li>
+                <strong>Segítség</strong>
+                Azonnali segítséget tud majd kérni a fejlesztőktől, ha valami olyan problémája van az alkalmazással, amit nem tud
+                megoldani. Például patchekből eredendő lefagyások különböző telefon verziókon
+            </li>
+            <li>
+                <strong>Kapcsolatfelvétel</strong>
+                Egyszerű kapcsolatfelvétel a játékosok számára a klubbal és az edzővel.
+            </li>
+            <li>
+                <strong>GYIK</strong>
+                Az alkalmazás alján mindig elérhető lesz ez a menüpont, ahol a felhasználó szinte minden
+                gyakori kérdésre megtalálja a választ.
+            </li>
+            <li>
+                <strong>Rólam</strong>
+                Az alkalmazás alján mindig elérhető menüpont a GYIK mellett, ez egyfajta súgóként működik, ami leírja a
+                legfontosabb dolgokat az alkalmazásról.
+            </li>
+        </ul>
+        </p>
+
+    </div>
+
+    <div class="card">
+        <h1>8. Felhasznált kész komponensek</h1>
+
+        <h2>Felhő szolgáltatás</h2>
+        <p>Ez a komponens felelős az alkalmazás által gyűjtött adatok (csapatok, ligák, játékosok, edzők, statisztikák
+            stb.) adatbázisban történő eltárolásáért. A szolgáltatás teljes körű megrendelése a biztosító cég weboldalán
+            keresztül történik.</p>
+        <table>
+            <tr>
+                <th>Szolgáltató</th>
+                <th>Ár</th>
+                <th>Megjegyzés</th>
+            </tr>
+            <tr>
+                <td>RackForest Zrt.</td>
+                <td>78.000 Ft / év</td>
+                <td>Biztosítja az adatbázis tárolását és a felhőszolgáltatást</td>
+            </tr>
+        </table>
+
+        <h2>Web szerver</h2>
+        <p>Ez a komponens biztosítja a domaint, a weboldalt, valamint a felhasználók adatainak tárolásához
+            szükséges adattárat. Illetve az updatek is a szerverről töltődnek le. A megrendelés, lebonyolítás, valamint
+            a havi bérleti díj interneten keresztül történik.</p>
+        <table>
+            <tr>
+                <th>Szolgáltató</th>
+                <th>Ár</th>
+                <th>Megjegyzés</th>
+            </tr>
+            <tr>
+                <td>RackForest Zrt.</td>
+                <td>87.600 Ft / év</td>
+                <td>Domain regisztráció és tárhely bérlés</td>
+            </tr>
+        </table>
+
+        <h2>GUI</h2>
+        <p>Az alkalmazás és a weboldal kinézetéért, praktikusságáért, valamint teljeskörű karbantartásáért egyetlen cég
+            felelős. A megrendelés és a havi díj rendezése szintén online történik.</p>
+        <table>
+            <tr>
+                <th>Szolgáltató</th>
+                <th>Ár</th>
+                <th>Megjegyzés</th>
+            </tr>
+            <tr>
+                <td>GUI Graphical Kft.</td>
+                <td>53.099 Ft / hó</td>
+                <td>Alkalmazás és weboldal design, karbantartás</td>
+            </tr>
+        </table>
+
+        <h2>Simple Pay integráció</h2>
+        <p>A prémium felhasználói csomag érdekébenszükséges ez az integráció. Az
+            OTP mellett szükség van a fejlesztő cég munkájára is.</p>
+        <table>
+            <tr>
+                <th>Szolgáltató</th>
+                <th>Ár / Megjegyzés</th>
+            </tr>
+            <tr>
+                <td>OTP Mobil Kft. / GUI Graphical Kft.</td>
+                <td>Jutalékok, rendszerhasználati díj</td>
+            </tr>
+        </table>
+
+        <h2>Számlázás</h2>
+        <p>A szoftveren keresztül történő vásárlások automatikus számlázást biztosít.</p>
+        <table>
+            <tr>
+                <th>Szolgáltató</th>
+                <th>Ár</th>
+            </tr>
+            <tr>
+                <td>KBOSS.hu Kft. (számlázz.hu)</td>
+                <td>30.400 Ft / év</td>
+            </tr>
+        </table>
+
+        <h2>Google Play / Apple App Store</h2>
+        <p>A telefon operációs rendszere alapján (Android és iOS), ezekről a helyekről lehet letölteni magát az
+            alkalmazást.</p>
+        <table>
+            <tr>
+                <th>Platform</th>
+                <th>Ár</th>
+            </tr>
+            <tr>
+                <td>Google Play / Apple App Store</td>
+                <td>Egyszeri 25.000 Ft</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div class="card">
+        <h1>9. Interfészek</h1>
+
+        <h2>
+            9.1 Felhasználói interfészek
+        </h2>
+
+        <p>A felhasználói interfészt elgondolás alapján egy cég készíti el és a karbantartást is ők
+            végzik. A cél az, hogy letisztult, egyszerű és könnyen áttekinthető legyen mindenki számára. Tehát a mai
+            elvárásoknak is megfeleljen.
+        </p>
+
+        <h2>
+            9.2 Software interfészek
+        </h2>
+
+        <p>
+            A szoftver egyik kulcsfontosságú része a kommunikációs interfész. A program működése
+            szorosan épül a telefon és a felhő közötti stabil kapcsolat fenntartására. Az itt tárolt adatok gyors
+            elérése létfontosságú a hatékony munkavégzéshez. A felhasználó a ,,Visszajelzés”
+            gombbal, pillanatok alatt tud kommunikálni a fejlesztő céggel.
+        </p>
+
+    </div>
+
+    <div class="card">
+        <h1>10. Alkalmazott szabványok</h1>
+
+        <h2>
+            10.1 Kötelezően alkalmazandó szabványok
+        </h2>
+
+        <p>Törvényileg előírt a gyártó és a fejlesztő számára, hogy egy év jótállást vállaljon a programért. Tehát a
+            programnak legalább egy évig kifogástalanul működnie kell. Nem
+            rendeltetésszerű használat, illetve vírustámadás okozta károkért a gyártó nem felelős.</p>
+
+        <p>
+            Verziószám: 0.313
+        </p>
+    </div>
+
+    <div class="card">
+        <h1>11. Szótár</h1>
+
+        <table>
+            <tr>
+                <th>Fogalom</th>
+                <th>Jelentés</th>
+            </tr>
+            <tr>
+                <td>User</td>
+                <td>Felhasználó</td>
+            </tr>
+            <tr>
+                <td>Freeware software</td>
+                <td>Ingyenes szoftver</td>
+            </tr>
+            <tr>
+                <td>Bug</td>
+                <td>Hiba, egy számítógépes programban/rendszerben</td>
+            </tr>
+            <tr>
+                <td>Restart</td>
+                <td>Újraindítás</td>
+            </tr>
+            <tr>
+                <td>Account</td>
+                <td>Felhasználó fiók</td>
+            </tr>
+            <tr>
+                <td>Update</td>
+                <td>Frissítés</td>
+            </tr>
+            <tr>
+                <td>GUI (Graphical User Interface)</td>
+                <td>Az a felület, amit a felhasználó lát</td>
+            </tr>
+            <tr>
+                <td>App</td>
+                <td>Alkalmazás</td>
+            </tr>
+            <tr>
+                <td>Cloud</td>
+                <td>Felhő alapú adattárolási modell</td>
+            </tr>
+            <tr>
+                <td>Interfész</td>
+                <td>A számítógép és az azt használó ember érintkezési felülete</td>
+            </tr>
+            <tr>
+                <td>Szerver</td>
+                <td>Olyan számítógép vagy szoftver, amely a weboldalakat szolgálja ki az interneten. Feladata a
+                    kliensek, például webböngészők által kért webes tartalmak, például HTML oldalak vagy képek
+                    továbbítása a hálózaton keresztül.</td>
+            </tr>
+            <tr>
+                <td>Support</td>
+                <td>Segítség, kapcsolat a felhasználó és a fejlesztő között</td>
+            </tr>
+        </table>
+
+
+    </div>
+</body>
+
+</html>
