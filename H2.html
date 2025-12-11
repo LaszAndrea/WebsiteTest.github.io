@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dokumentáció</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 40px auto;
+            line-height: 1.6;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #333;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Dokumentáció</h1>
+
+    <div class="card">
+        <h2>1. Bevezetés</h2>
+        <p>
+            A New-Era egy új szintre emeli az alsóbb osztályú football mérkőzések és csapatok nyomon
+            követését. Emellett statisztikai elemzésekhez, értékelésekhez való egyszerűbb hozzáférést biztosít mindenki
+            számára és a live score funkció segítségével élőben tudjuk követni a mérkőzéseket!
+        </p>
+        <p>
+            Célom ezen alkalmazás segítségével, hogy az edzők, játékvezetők és a focisták számára egy egyszerű és
+            átlátható program készítése, ahol a játékosokat és a bírókat értékelni tudják az edzők és az applikációra
+            beregisztrált nézők! Minden mérkőzés után a meccs legjobbja
+            kihirdetésre kerül.
+        </p>
+        <p>
+            Meccsekről felvételt lehet készíteni, és feltölteni vágott vagy teljes, tömörített formában.
+            A mérkőzés értékelései rövid időn belül felvihetők az applikációba.
+        </p>
+        <p>
+            A nem leigazolt játékosok könnyen kapcsolatba tudnak lépni a vezetőedzővel és a klubbal a leigazolás
+            egyeztetése érdekében.
+        </p>
+
+        <h3>Funkciók:</h3>
+        <ul>
+            <li>játékosok, csapatok áttekintése</li>
+            <li>meccsek elemzése, értékelése</li>
+            <li>játékosok, bírók értékelése</li>
+            <li>live score (élő meccs követés)</li>
+            <li>adott csapat hírei (pl. sérülések)</li>
+            <li>videók feltöltése (vágott vagy teljes verzióban)</li>
+            <li>kapcsolatfelvétel leendő focisták részére</li>
+            <li>oktató videók leendő focisták számára</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>2. Az alkalmazás helye</h2>
+        <p>
+            Az alkalmazást játékosok, edzők, bírók és a labdarúgást kedvelő nézők használhatják.
+            A célcsoport a futballkedvelők közössége, de fontos, hogy minden felhasználói réteg számára azonos élményt
+            nyújtson.
+        </p>
+
+        <h3>2.1 Üzleti lehetőségek</h3>
+        <p>
+            Alapvetően egy Freeware software a terv, ami reklámokból fog hozni bevételt, de
+            elérhető költséges verzió is, amely jobb felhasználói élményt nyújt és több funkcióval rendelkezik.
+            (Premium, Premium Team)
+        </p>
+        <p>
+            A cél egy, vagy több céggel szerződésbe lépni, akiknek a termékeit az alkalmazás által lehet reklámozni. Ezek a cégek
+            nagyrészt sportcégek lennének, akik árulnak football cipőket, kapuskesztyűket vagy akármilyen
+            sportruházatot. A szerződésben lévő cég bizonyos előre megbeszélt, és egyeztetett termékeit reklámozná a szoftver,
+            amelyek folyamatosan a képernyőn fognak megjelenni a nem regisztrált userek számára. A Premium verziót
+            használóknak nem lesznek reklámok, hirdetések.
+        </p>
+        <p>
+            A program használata közben, bizonyos lépések után felugró hirdetések fognak megjelenni. Cél, hogy a
+            programon belül lehessen előfizetést is vásárolni, ami a reklámokat eltünteti, ezzel gyorsabb használatot
+            adva a felhasználónak, amitől a felhasználói élmény is nagymértékben javul. A cégek minden előfizető után
+            kapnak 1% részesedést, amik a
+            reklámok eltüntetése miatt kapnak. (1490 Ft a Premium csomag) A sport cégek az alkalmazást fogják
+            reklámozni, ezzel is támogatva a program növekedését és az új felhasználók csatlakozását.
+        </p>
+
+        <h3>2.2 Probléma megfogalmazása</h3>
+        <p>
+            Az alkalmazás készítése egy football problémából ered, ami az, hogy nincs olyan szoftver, ami elő eredményt,
+            meccs újranézését és értékeléseket, elemzéseket tud biztosítani a megyei szintű foci kedvelők, játékosok és
+            edzők számára. Valamint a másik fontos indok a
+            felhasználóbarát felület kialakítása, hogy a felhasználók egy helyen tudják követni a kedvenc
+            falusi csapatukat és a csapat híreit. Ugyancsak a problémákhoz tartozik az is, hogy a jelenlegi szoftver
+            csak böngészőből érhető el, ezzel szemben a New Era letölthető Google Playből és az AppStoreból.
+        </p>
+        <p>
+            Az előbb említett problémák a felhasználó nemtetszését válthatják ki, ezért szükséges ezeknek a javítása. Az
+            olyan felhasználóknak, akik nem, vagy csak keveset használnak
+            számítógépet segítenünk kell a megfelelő és egyszerű használat fenntartásában. (falusi idős bácsik)
+        </p>
+        <p>
+            Kapcsolatban kell állni a felhasználókkal valamilyen formában. Sokszor probléma szokott
+            lenni, hogy sok alkalmazásban nincs lehetőség a felhasználók saját véleményünk
+            kinyilvánítására. Ezt azzal lehet orvosolni, hogy az alkalmazáson belül egy Support nevű fülön
+            tud majd segítséget kérni, ha valami olyan problémája van az alkalmazással, amit nem
+            tud megoldani vagy bármilyen bugot észlelt. A bugokat különböző patchekkel kell megoldani és ezek a
+            frissítések javítják a program működését, kezelését. Ezzel az opcióval egyszerűen el lehet érni a zökkenő és
+            hibamentes működést.
+        </p>
+        <p>
+            Az alkalmazás az utólagosan kijövő frissítéseket (patcheket) a megfelelő és gördülékeny
+            futtatás érdekében a háttérben kell végezni, lehetőség szerint hétköznap, hiszen a megyei meccsek hétvégén
+            vannak. A Frissítések menüpontban a patchek lesznek listázva és itt a
+            felhasználó megtudja nézni milyen bugok lettek kijavítva vagy funkciók átdolgozva. A New Era alkalmazás
+            jobb élményt nyújt, mint a konkurenseknek a hasonló felépítésű
+            alkalmazásai, mivel lesz benne egy beépített, Cloud alapú szolgáltatás, amivel lehetőség lesz egy felhő
+            típusú rendszerben az adatokat tárolni. Valamint egy hasonló, ugyancsak Cloud
+            típusú rendszerben lesznek eltárolva az adatbázisok adatai, amik a játékosokat, csapatokat, meccseket
+            tartalmazza, így a felhasználó számára kevés helyet foglal az alkalmazás és akár
+            régebbi típusú telefonokkal rendelkező felhasználóknak is ugyanazt az élményt nyújtja
+        </p>
+
+        <p>
+            A kész program 2 verzióban fog megjelenni, hiszen lesz egy böngészőből elérhető verzió és
+            lesz egy letölthető verzió is. Mind a két esetben szükséges az internet hozzáférés a
+            felhasználók számára!
+        </p>
+
+        <p>
+            Az alkalmazás leghasznosabb tulajdonságai a folyamatos frissítések, a kapcsolatfenntartás
+            felhasználó és rendszergazdák között, valamint a folyamatosan bővülő Cloud alapú
+            adatbázisok.
+        </p>
+
+        <h3>2.3 Az elkészült termék helye</h3>
+        <p>
+            New-Era célközönsége elsősorban a futball szerelmesei, és ezen belül is azt a réteget céloztam meg akiknek
+            mindenük a statisztika világa és szívesen bújják az érdekesebbnél érdekesebb adatokat, elemzéseket, videókat
+            és értékeléseket. Viszont nemcsak kizárólag a
+            sportág iránt érdeklődők számára érhető el. Tehát akár a futballt hobby szinten űzők, a
+            labdarúgás világával most ismerkedők vagy éppen a karrierjüket most kezdő fiataloknak is elérhető az
+            applikáció.
+        </p>
+        <p>
+            A termék alapvető megjelenési formája egy webes felület, amely egyaránt asztali számítógépekre vagy
+            mobiltelefonokra is elérhető, azonban ezen felül a hordozhatóság érdekében mobil applikáció is van biztosítva a felhasználók számára.
+        </p>
+        <p>
+            A program fő célja elsősorban a játékosok, edzők és bírók munkájának a megkönnyítése. Az alkalmazás
+            lehetőséget biztosít a szurkolók számára visszanézni egy adott meccset, amiről éppen lemaradtak vagy
+            megtekinteni a mérkőzések összefoglalóját, a forduló góljára és
+            játékosára szavazni. A vezetőedzőknek lehetőségük van értékelni a játékosaikat az adott meccs után, emellett
+            a játékvezetők számára lehetőség van a mérkőzések jegyzőkönyveit
+            feltölteni az appba. Az applikációnak van egy adatbázis része, ahova különböző statisztikák
+            kerülnek fel játékosokról, csapatokról pl.: gólok, gólpasszok, sárga és piros lapok, játékosok átlag
+            értékelései és a pályára lépéseinek száma. Továbbá minden klubcsapatról számon
+            tartjuk az adott csapat előző mérkőzéseit és ezek alapján felállítunk különböző statisztikákat amik bárki
+            számára elérhetőek.
+        </p>
+        <p>
+            Azonban egyik nem titkolt cél az is, hogy a futball világában nem jártas vagy éppen most
+            kezdő fiatalokat is be lehessen vezetni a sportágba, éppen ezért úgy lett tervezve a New-Era-t, hogy ők is
+            megtalálják maguknak a megfelelő, szórakoztató tartalmakat. Lehetőségük van a futball történelméről olvasni
+            vagy éppen a futball játékszabályait megismerni, mint például a nehezen érthető les szabály. Az oldalon
+            lehetőség van különböző
+            - a futballal kapcsolatos - kvízek kitöltésére, aminek keretén belül havonta értékes nyeremények kerülnek kisorsolásra
+        </p>
+        <p>
+            A Prémium verzióra előfizetők különböző előnyöket élvezhetnek, ilyenek például exkluzív
+            tartalmak, amik közé tartoznak a különféle oktató videók és különféle taktikák megismerése és
+            elsajátítása, amelyeket profi szakemberek segítségével lett összeállítva, emellett az előfizetők számára
+            lehetőség van teljes mérkőzések letöltésére. További hasznos
+            funkció, hogy egy adott mérkőzés összefoglalóját vagy egy általunk kiválasztott gólt akár le is
+            tölthetünk számítógépünkre vagy mobiltelefonunkra. Ezeket a letöltött tartalmakat akkor is elérhetjük, ha
+            éppen offline használjuk az applikációt.
+        </p>
+        Mind ezek mellett elérhető egy úgynevezett livescore szolgáltatás is, amelynek segítségével többé nem maradsz le
+        egyetlen gólról sem. Értesítéseiknek köszönhetően a meccs minden
+        fontos mozzanatáról értesülhetsz. Ez a szolgáltatás teljeskörű élményt nyújt mindazoknak, akik nem tudják élőben
+        nézni a mérkőzést.
+
+        <p>
+
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>3. Érintettek és felhasználók</h2>
+
+        <p>
+            A program elkészítése során szükség van érintettekre, akik a fejlesztésben vesznek rész, valamint
+            felhasználókra, akik a folyamatos használatot biztosítják vagy végzik.
+        </p>
+
+        <h3>3.1 Az érintettek összefoglalása</h3>
+        <ul>
+            <li><strong>Programozó:</strong> Az alkalmazás fejlesztéséért felelős.</li>
+            <li><strong>Projektmenedzser:</strong> Tervezés, irányítás, erőforrások biztosítása.</li>
+            <li><strong>Rendszergazda:</strong> Az alkalmazás stabil működéséért felel.</li>
+            <li><strong>Cloud szolgáltatás:</strong> Az adatok tárolásának biztosítása.</li>
+            <li><strong>Értékesítő:</strong> Üzletkötések lebonyolítása.</li>
+            <li><strong>Marketing menedzser:</strong> A termék népszerűsítése és marketingje.</li>
+            <li><strong>GUI fejlesztők:</strong> A felület készítése és a megfelelő célközönség elérése.</li>
+        </ul>
+
+        <h3>3.2 A felhasználók összefoglalása</h3>
+        <ul>
+            <li><strong>Átlagos felhasználó:</strong> Csak használja az alkalmazást.</li>
+            <li><strong>GUI karbantartó:</strong> A grafikus megjelenésért felel.</li>
+            <li><strong>Szervergazda:</strong> A háttérrendszer működtetése.</li>
+        </ul>
+
+        <h3>3.3 Felhasználói környezet</h3>
+        <p>
+            Mivel az alkalmazás és weboldal három legfontosabb eleme a football csapatokról való
+            információszerzés, elemzések megtekintése, csapatok, játékosok követése. Az fejlesztett szoftver,
+            mobil alkalmazás formájában is publikálva lesz illetve böngészőből is elérhető. A mobil alkalmazás lehetővé
+            teszi, hogy szinte bárhol és bármikor hozzáférjünk az alkalmazásunk funkcionalitásához. Ez azt jelenti, hogy
+            nem kell asztali számítógép vagy laptop közelében lennünk, hogy használni tudjuk az alkalmazást. Csak ki
+            kell vennünk a zsebünkből vagy táskánkból a mobiltelefonunkat, és máris használhatjuk. Lehetővé teszi az
+            értesítések fogadását és az interakciót a felhasználókkal. Például az alkalmazásunk értesíthetnek minket a
+            frissítésekről, fontos eseményekről (esetünkben meccskövetés (LiveScore) vagy személyes értesítésekről, így
+            mindig naprakész lehetünk a megyei labdarúgás világában.
+        </p>
+        <p>
+            Az alkalmazás felhasználói környezete kiválóan kombinálja a letisztult és vonzó design elemeket. A cél az
+            élénk színek mértékletes használata, hogy azonnal magával ragadja a
+            felhasználót, miközben nem terheli meg a szemet. A felhasználói felület egyszerűségét és céltudatosságát
+            hangsúlyozzuk, így a felhasználó könnyen megértheti, hogy milyen
+            lehetőségek állnak rendelkezésére. A fő teszt része kiemelkedő egyszerűséggel és világos megjelenéssel bír.
+            A felhasználó
+            egyértelműen és gyorsan láthatja megjelenő adatokat, információkat, diagrammokat. A
+            letisztult dizájn és a könnyen olvasható betűtípus segítik a felhasználót a fókusz megtartásában és a célja
+            megvalósításában.
+        </p>
+        <p>
+            A felhasználók adatairól egy külön menüpont gondoskodik, arról, hogy a felhasználó megtalálja a saját
+            profiljának adatait, amit szerkeszteni is tud. Az alkalmazás csak email címet, illetve egy felhasználónevet
+            kér a felhasználóktól. A
+            felhasználók személyes adatai nincsenek tárolva, így garantálva a felhasználók magánéletének
+            tiszteletben tartását. Az alkalmazás csak a felhasználók által kedvelt csapatok, és játékosok adatait menti
+            felhő alapú tárhelyre, és ezeket a felhasználó bármikor megtekintheti. Az alkalmazás ennek köszönhetően
+            lehetővé teszi a felhasználók számára az általuk érdekelt
+            információk monitorozását. Az alkalmazás működéséhez internetkapcsolat szükséges! </p>
+        <p>
+            Az alkalmazás célközönsége a labdarúgás szerelmesei, edzők, illetve játékosok. A felhasználókat elemezvén,
+            körülbelül a felhasználók 38%-a csak pár alkalommal fogja használni az applikációt, kedvenc játékosa, vagy
+            csapatának megtekintésére. A közönség kb. 52%-a rendszeres felhasználónak lesz elkönyvelhető. A fennmaradó
+            kb. 10% az úgynevezett ,,kíváncsiskodó”
+        </p>
+
+        <ul>
+            <li><strong>Maximális felhasználószám:</strong> 150.000 fő</li>
+            <li><strong>Felhasználók száma egy időintervallumban:</strong> 7000 fő</li>
+        </ul>
+
+        <ul>
+            <li><strong>Hétköznapi felhasználók:</strong> 38%</li>
+            <li><strong>Szakmai felhasználók (edzők, játékosok, bírók):</strong> 52%</li>
+            <li><strong>Egyéb:</strong> 10%</li>
+        </ul>
+
+        <h3>3.5 Felhasználók adatai</h3>
+        <table>
+            <tr>
+                <th>Cégek</th>
+                <th>Felelősség</th>
+                <th>Elérhetőség</th>
+            </tr>
+            <tr>
+                <td>GUI Graphical Kft</td>
+                <td>GUI felület</td>
+                <td>info@guigraph.hu</td>
+            </tr>
+            <tr>
+                <td>Rackforest</td>
+                <td>Cloud szolgáltatások</td>
+                <td>info@rackforest.hu</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div class="card">
+        <h2>4. A végtermék áttekintése</h2>
+
+        <p>
+            A következő pontokban láthatóak összefoglalva azok a tényezők, amelyek elengedhetetlenek az alkalmazás
+            fejlesztéséhez és a piacra való sikeres bevezetéshez.
+        </p>
+
+        <h3>4.1 A termék kapcsolatai</h3>
+
+        <p>
+            A termék több funkciót is el tud látni. A football mérkőzések követése a fő funkciója alkalmazásunknak,
+            mely egyszerű és bárki számára könnyen elérhető.
+        </p>
+
+        <p>
+            Ezen felül a felhasználók megtudják tekinteni a mérkőzések részletes statisztikáit, adatait, melyet egy
+            rendszeresen frissített adatbázisból töltünk be, így klienseink mindig a legfrissebb
+            információkat kapják.
+        </p>
+
+        <p>
+            Felhasználóknak lehetőségük van a meccseket, az edzőket, a játékosokat és a bírókat értékelni. A
+            mérkőzésekről lehetőség van felvételt készíteni, és vágott vagy teljes de
+            tömörített formában feltölteni azokat. Az előfizetők számára motivációs videók lesznek elérhetők, amivel a
+            kezdő focisták kedvet kaphatnak a sportág megismeréséhez. Az alkalmazás lehetőséget biztosít arra, hogy a
+            focisták, illetve az edzők egymás között kapcsolatba lépjenek a közös együttműködés lehetősége
+        </p>
+
+        <h3>4.2 A termék kapcsolatai</h3>
+
+        <table>
+            <tr>
+                <th>Kliensek előnyei</th>
+                <th>Az ezt támogató rendszer jellemzői</th>
+            </tr>
+            <tr>
+                <td>Lehetőség az adattárolásra</td>
+                <td>A felhasználók tudnak videókat feltölteni, és azokat tárolni.</td>
+            </tr>
+            <tr>
+                <td>Gyorsaság</td>
+                <td>Az alkalmazásban gyorsan és egyszerűen megtalálja mindenki, amit keres.</td>
+            </tr>
+            <tr>
+                <td>Áttekinthetőség</td>
+                <td>Egyszerű és letisztult</td>
+            </tr>
+        </table>
+
+        <h3>4.3 Feltételezések és függőségek</h3>
+
+        <p>
+            A program tervezése és fejlesztése során számos előfeltétel és függőség merül fel, melyek
+            jelentős hatással lehetnek a szoftverre hosszú távon.
+        </p>
+
+        <p>
+            Elsődlegesen fontos megjegyezni, hogy a programot egy egyetemi hallgató készíti, akinek
+            változó mennyiségű szabadideje van, és ez a fejlesztés ütemét befolyásolhatja. Az egyetemi kötelezettségek,
+            például zárthelyik és beadandók, időnként csökkenthetik a rendelkezésre
+            álló időt.
+        </p>
+
+        <p>
+            A program működése szorosan függ a felhőszolgáltatástól, amelyet a szolgáltató cég biztosít. Ebben az
+            esetben problémák is előfordulhatnak, például a szolgáltató visszaléphet, ami a program hiányos működéséhez
+            vezethet. A szerverek állapota is kulcsfontosságú, mivel hibák
+            vagy karbantartás esetén az adatok elveszhetnek vagy nem lesznek elérhetők.
+        </p>
+
+        <p>
+            A szoftver elérhetősége az iOS esetében az App Store-ból, míg az Android esetében a Play Áruházból függ. Ennek
+            eredményeként a program terjesztése szorosan kapcsolódik ezekhez a platformokhoz, de böngészőből is
+            egyszerűen elérhető.
+        </p>
+
+        <p>
+            A szoftver kiadásához több licencszerződést is be kell szerezni, és ezek adminisztrációja is befolyásolhatja
+            a megjelenés időpontját
+        </p>
+
+        <p>
+            A program az adatok szerverre történő továbbítására támaszkodik, ezért a szerveroldali
+            infrastruktúra is kulcsfontosságú.
+        </p>
+
+        <p>
+            Végül, a program mellé tervezett weboldal készítése és elérhetősége is kihathat a program
+            terjesztésére. Ha a webdesigner késik a weboldal elkészítésével, az a kész szoftver
+            terjesztésének késedelmét is eredményezheti, ami problémát okozhat a felhasználók
+            számára.
+        </p>
+
+        <h3>4.4 Installáció</h3>
+
+        <p>
+            A New-Era Android és iOS készülékekre is elérhető. Androidos rendszereken a Play Áruház alkalmazásban
+            “New-Era” néven található meg, iOS-en ugyanígy az App Store-ban.
+        </p>
+
+        <p>
+            Az alkalmazás nem foglal sok helyet, könnyedén letölthető akár mobilinternet használatával
+            is. Telepítés előtt győződjünk meg róla, hogy az App Store-ban/Play Áruházban leírt rendszer
+            követelményeknek megfelel a készülékünk. Először a program standard verziója fog települni, ezt később az
+            alkalmazáson belül lehet fejleszteni, viszont a premium változat már fizető
+        </p>
+
+        <p>
+            Letöltés után regisztrálnunk kell egy New-Era accountot de enélkül is használható. Felhasználónév, jelszó,
+            e-mail, paramétereket kell megadni. Ezt követi pár felugró ablak értesítési beállításokkal, itt megadhatjuk,
+            hogy szeretnénk-e értesítéseket kapni az alkalmazástól. Ha minden megvan a kezelőfelület fogad minket, a
+            program használatra
+            készen áll.
+        </p>
+
+        <p>
+            Mivel Cloud alapú szolgáltatás, így folyamatos wifi/mobilinternet kapcsolat elengedhetetlen. Ennek előnye,
+            hogy lassabb mobilokon is elfut. A szoftver automatikusan updateli magát megfelelő internetkapcsolat esetén,
+            hogy mindig naprakész szoftverünk legy
+        </p>
+
+    </div>
+
+    <div class="card">
+        <h2>5. A végtermék jellemzői, biztosított szolgáltatások</h2>
+
+        <p>
+            A NewEra alkalmazásának 3 verziója van. Az alapcsomagtól egészen a Prémium Team
+            csomagig bezárólag. A több funkcióval rendelkező verzió tartalmazza minden, nála kevesebb
+            funkcióval rendelkező verzió szolgáltatásait. Az alap verziójú szoftver alap szolgáltatásokkal bír, mely
+            mindenki számára ingyenesen
+            elérhető, erre az alapcsoportra épülnek a szoftver további verziói.
+        </p>
+
+        <h5>Alap verzió:</h5>
+
+        <ul>
+            <li>standard kezelőfelület</li>
+            <li>mérkőzések élő nyomonkövetése</li>
+            <li>mérkőzések, játékosok statisztikái</li>
+            <li>reklámok</li>
+            <li>edzői nyilatkozatok nem elérhetőek</li>
+            <li>játékosok, bírók értékelése nem elérhető</li>
+        </ul>
+
+        <p>
+            Az alap szoftver ugyanazzal a felhasználói felülettel rendelkezik, mint a további szoftverek,
+            letisztult stílus, átláthatóság, egyszerű kezelés. A verzió teljesen ingyenesen hozzáférhető
+            bárki számára, letölthető és használható, viszont reklámokat tartalmaz a témával kapcsolatban, illetve a
+            belépést követő 1 perc után ajánlani fogja a nagyobb verzióra történő
+            váltást.
+        </p>
+
+        <h5>Prémium verzió:</h5>
+
+        <ul>
+            <li>standard kezelőfelület</li>
+            <li>mérkőzések élő nyomonkövetése</li>
+            <li>mérkőzések, játékosok statisztikái</li>
+            <li>A felhasználók is tudják értékelni a játékosokat illetve bírókat</li>
+            <li>edzői nyilatkozatok, elérhetővé válna</li>
+            <li>reklámmentes</li>
+            <li>egyszerű kapcsolat felvétel a vezetőedzővel a leendő focisták számára</li>
+            <li>aktualis sporthírek, sporttörténet </li>
+            <li>moticációs videók, quizek, oktató és ajánló videók</li>
+        </ul>
+
+        <h5>Prémium team:</h5>
+
+        <ul>
+            <li>standard kezelőfelület</li>
+            <li>mérkőzések élő nyomonkövetése</li>
+            <li>mérkőzések, játékosok statisztikái</li>
+            <li>edzői nyilatkozatok, elérhetővé válna</li>
+            <li>reklámmentes</li>
+            <li>a klubok számára egyszerű kapcsolatfelvétel a játékosokkal</li>
+            <li>mérkőzések letöltése</li>
+            <li>aktualis sporthírek, sporttörténet</li>
+        </ul>
+
+        <p>
+            A Prémium Team verzió a csapatoknak készült, amely biztosítja a klubok számára az összes
+            funkciót amit az alkalmazás tartalmaz, illetve az edzők hozzáférnek az összes statisztikához mind a
+            mérkőzésekről, játékosokról. Aki a klubnál dolgozik, focizik annak a klub képes megosztani a verziót és így
+            a játékosok, klubnál dolgozók ingyenesen hozzáférhetők az alkalmazás legmagasabb funkcióival rendelkező
+            verziójához. A klub vezetőjének szükséges előfizetni erre a verzióra és hivatalos dokumentumot feltölteni,
+            ezzel igazolni, hogy valóban
+            klubként történt regisztrálás.
+        </p>
+
+    </div>
+
+    <div class="card">
+        <h2>6. Minőségi elvárások</h2>
+
+        <p>
+            Napjainkban a felhasználóknak nagyobb igényei vannak egy szoftver vásárlásánál. Az egyik legnagyobb elvárás,
+            hogy egy egyszerű letisztult felülettel találkozzanak, aminek a használata
+            is magától értetődő, egyszerű. Az alkalmazás sebessége a lehető leggyorsabb legyen. Aki
+            letölti az alkalmazást, annak lehetősége nyílik arra, hogy értékelje az alkalmazást egy előre
+            elkészített kérdéssora 1-től 5-ig terjedő skálán, illetve olyan funkciókat ajánljanak fel, amit még szívesen
+            látnának a programban. Ezek beérkezését követően, statisztikai elemzések alapján, ha azt látjuk, hogy ez a
+            felhasználók előnyére válhat, növelheti a felhasználói élményt, több előfizetést generálhat, akkor ezeket
+            egy jövőbeli fejlesztésekkel implementálni tudjuk az alkalmazásba.
+        </p>
+
+    </div>
+
+    <div class="card">
+        <h2>7. Dokumentációkkal kapcsolatos követelmények</h2>
+
+        <p>
+            A program készítése során különböző szoftverek kerültek felhasználásra a dokumentáláshoz.
+        </p>
+
+        <ul>
+            <li>Google Drive: közös felhasználói felület, dokumentumok szerkesztése</li>
+            <li>Word: jegyzetelés</li>
+            <li>Powerpoint: prezentáció készítés</li>
+            <li>Fotor: Logó készítés</li>
+        </ul>
+
+    </div>
+
+    <div class="card">
+        <h2>8. Kockázatok</h2>
+
+        <p>
+            Sajnos, minden projektben előfordulhatnak kockázatok. Ezek közül két féle kockázati típust
+            tudunk megkülönböztetni azt, ami tőlem származik és azt, ami tőlem független.
+        </p>
+
+        <h5>Tőlem független kockázatok:</h5>
+        <ul>
+            <li>Internetkapcsolat: Az adatbázis eléréséhez internetkapcsolatra van szükség</li>
+            <li>AI: Mivel az AI-t egy ezzel foglalkozó cég készíti előfordulhatnak esetleges késések a kivitelezésben,
+                ha a cég rosszul értelmezi a feladatot és hibák lépnek fel a
+                szoftverben. Illetve nem felel meg a minősége a mi elvárásainknak, mivel egy magas színvonalú
+                programot szeretnék készíteni</li>
+            <li>Cloud szolgáltatás: Hasonló problémák lehetnek, mint az AI-nál. Illetve probléma
+                lehet még a sebességgel, ami az internetkapcsolattól függ. </li>
+            <li>Web-server: A szoftver eléggé függ az internettől, az installáció egy része, valamint az updatek is a
+                szerverekről történnek, illetve a weboldal is ezen fut, ezért egy esetleges szerver összeomlás, valamint
+                egy restart vagy karbantartás komoly fennakadásokat okozhat. Lehetséges megoldás a több szerver
+                üzemeltetése, de ez plusz költségekkel jár</li>
+            <li>Nem megfelelő minőségű a feltöltött videó, amit a felhasználók feltöltenek</li>
+        </ul>
+
+        <h5>Tőlem függő kockázatok:</h5>
+        <ul>
+            <li>Költségvetés: Mivel egyetemista vagyok így alacsony a költségvetés is. Ezért a megfelelő szaktudás sem
+                áll rendelkezésre</li>
+            <li>A kezdő tárhely miatt kezdetben kicsi az adatbázis, ahol a játékosokat tárolom. Ennek következtében
+                későbbi bővítés szükséges</li>
+            <li>Előfordulhatnak technikai problémák, egy esetleges számítógép meghibásodása esetén, amit nehéz pótoli
+            </li>
+            <li>A tanulmányaimre való tekintettel az idő keret szűkös és nem tudom
+                felbecsülni a szoftver fejlesztésének sebességét és időtartamát, ezért ebből származhatnak késések.</li>
+            <li>Esetleges bug-ok vagy elírások előfordulhatnak</li>
+            <li>Jogi védelem: Abban az esetben, ha egy esetleges videó alapján bármilyen
+                sérülés történik, le kell írni, hogy nem bállalok felelősséget a sérülésért és mindenki saját
+                felelősségre gyakoroljon</li>
+        </ul>
+
+    </div>
+
+    <div class="card">
+        <h2>9. Szótár</h2>
+
+        <table>
+            <tr>
+                <td>user</td>
+                <td>felhasználó</td>
+            </tr>
+            <tr>
+                <td>freeware software</td>
+                <td>ingyenes szoftver</td>
+            </tr>
+            <tr>
+                <td>bug</td>
+                <td>hiba, egy számítógépes programban/rendszerben</td>
+            </tr>
+            <tr>
+                <td>restart</td>
+                <td>újraindítás</td>
+            </tr>
+            <tr>
+                <td>patch</td>
+                <td>javítócsomag</td>
+            </tr>
+            <tr>
+                <td>account</td>
+                <td>felhasználó fiók</td>
+            </tr>
+            <tr>
+                <td>update</td>
+                <td>frissítés</td>
+            </tr>
+            <tr>
+                <td>GUI (Graphical User Interface)</td>
+                <td>az a felület, amit a felhasználó lá</td>
+            </tr>
+            <tr>
+                <td>app</td>
+                <td>alkalmazás</td>
+            </tr>
+        </table>
+
+        <p>
+            Verziószám: 0.210
+        </p>
+    </div>
+
+</body>
+
+</html>
