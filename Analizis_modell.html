@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New-Era Alkalmazás Dokumentáció</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 40px auto;
+            line-height: 1.6;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #333;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>1. Bevezetés</h1>
+
+        <p>
+            Ebben a részben a H3-ban bemutatott kezdetleges ábrából kiindulva alkottam meg az osztálydiagramot és az
+            alrendszereket. Ezeket finomítottam és dolgoztam ki részletesebben. Leírtam a kapcsolatok részletes
+            tulajdonságait, azonosítottam az attribútumokat és egyesével minden osztálynak elkészítettem a táblázatát,
+            amiben a róla szereplő adatok találhatóak.
+        </p>
+
+    </div>
+
+    <div class="card">
+        <h1>2. Kezdetleges osztálydiagram</h1>
+        <img src="osztalydiagram.png" style="width: 100%;">
+
+        <h2>2.2 Osztályok felsorolása</h2>
+        <ul>
+            <li><strong>Main:</strong> Ez az osztályunk a program főosztálya. Meghívja és kezeli az alrendszereket.</li>
+            <li><strong>GUI:</strong> A program grafikus felületét kezeli.</li>
+            <li><strong>Kezdőlap:</strong> A felhasználó itt éri el a különböző aloldalakat és funkciókat.</li>
+            <li><strong>Support:</strong> Segítséget nyújt a felhasználónak, és lehetőséget ad a kapcsolatfelvételre a
+                rendszergazdákkal és a klubbal.</li>
+            <li><strong>Hírek:</strong> Az alkalmazás témájához kapcsolódó hírek kezelése (football hírek).</li>
+            <li><strong>Frissítések:</strong> A felhasználó itt tekintheti meg a patch notes-ot.</li>
+            <li><strong>Nyelv:</strong> A felhasználó kiválaszthatja a számára megfelelő nyelvet (angol, magyar, német).
+            </li>
+            <li><strong>Bejelentkezés:</strong> Bejelentkező felület a felhasználó számára.</li>
+            <li><strong>Regisztráció:</strong> Új felhasználó felvitele az adatbázisba (e-mail, jelszó, felhasználónév).
+            </li>
+            <li><strong>Meccscenter:</strong> Felhasználói felület, amely összegzi a program szolgáltatásait és
+                funkcióit.</li>
+            <li><strong>Eredmények:</strong> Az eredmények megtekintésének lehetősége.</li>
+            <li><strong>Mérkőzések:</strong> A mérkőzések megtekintése.</li>
+            <li><strong>Csapatok:</strong> A csapatok megtekintése.</li>
+            <li><strong>Elemzések:</strong> A meccsek elemzéseinek megtekintése.</li>
+            <li><strong>Értékelések:</strong> A meccsek és bírók értékelésének lehetősége.</li>
+            <li><strong>Oktató videók (Prémium):</strong> Motivációs és oktató videók megtekintése.</li>
+            <li><strong>Személyes beállítások:</strong> Felhasználói adatok, LiveScore és értesítések kezelése.</li>
+            <li><strong>Jelszó kezelés:</strong> Jelenlegi jelszó megváltoztatása.</li>
+            <li><strong>Email kezelés:</strong> E-mail cím módosítása.</li>
+            <li><strong>Értesítés kezelés:</strong> Értesítések ki/be kapcsolása és a LiveScore funkció kezelése.</li>
+            <li><strong>Videó:</strong> Meccsről videók feltöltése.</li>
+            <li><strong>File Kezelés:</strong> Videók ellenőrzése, tömörítése és feltöltése a felhőbe.</li>
+            <li><strong>Cloud:</strong> Videók feltöltése és kereső műveletek végrehajtása.</li>
+            <li><strong>Result/Eredmény:</strong> A lekérések után a videók és adatok tárolása.</li>
+        </ul>
+
+        <h2>2.3 Alrendszerek</h2>
+        <h3>1. Menü alrendszer</h3>
+        <p>A menü alrendszer segítségével a felhasználó könnyedén navigálni tud az alkalmazás különböző osztályai között
+        </p>
+        <img src="menu.png" style="width: 100%;">
+
+    </div>
+
+    <div class="card">
+        <h1>3. Az analízis modell osztálydiagram</h1>
+        <img src="analizis_modell.png" style="width: 100%;">
+        <h2>3.1 Grafikai alrendszer</h2>
+        <p>
+            A Grafikai alrendszer a GUI működtetéséért felelős ez működteti, futtatja a felhasználói felületet, ezen
+            keresztül kommunikál a felhasználó az alkalmazással.
+        </p>
+
+        <h2>3.1.1 Felhasználó manager</h2>
+        <p>
+        <ul>
+            <li>Felelőssége, feladata: Az alkalmazás használata.</li>
+        </ul>
+        <table>
+            <tr>
+                <th>Név</th>
+                <th>Típus</th>
+                <th>Leírás</th>
+            </tr>
+            <tr>
+                <td>Felhasználó</td>
+                <td>-</td>
+                <td>Használja és kezeli a programot.</td>
+            </tr>
+        </table>
+        </p>
+
+        <h2>3.1.2 Main manager</h2>
+        <p>
+        <ul>
+            <li>Felelőssége, feladata: A program összefogó része </li>
+            <li>Együttműködők: GUI</li>
+            <li>A program kiindulópontja</li>
+        </ul>
+        <table>
+            <tr>
+                <th>Név</th>
+                <th>Típus</th>
+                <th>Leírás</th>
+            </tr>
+            <tr>
+                <td>metódusok</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </table>
+        </p>
+
+        <h2>3.1.3 GUI manager</h2>
+        <p>
+        <ul>
+            <li>Felelőssége, feladata: A program grafikai motorja</li>
+            <li>Együttműködők: Main, Kezdőlap</li>
+            <li>Grafikai motor</li>
+        </ul>
+        <table>
+            <tr>
+                <th>Név</th>
+                <th>Típus</th>
+                <th>Leírás</th>
+            </tr>
+            <tr>
+                <td>loadKepernyo</td>
+                <td>-</td>
+                <td>applikáció képernyőjének a betöltése</td>
+            </tr>
+        </table>
+        </p>
+
+        <h2>3.1.4 Funkcionális modell</h2>
+        <img src="functional_model.png" style="width: 100%;">
+
+    </div>
+
+    <div class="card">
+        <h1>4. Menü alrendszer</h1>
+        <img src="menuv2.png" style="width: 100%;">
+
+        <ul>
+            <li><strong>Felelőssége, feladata:</strong> Egy kezdő felület, ami segít tájékozódni, a felhasználó innen
+                léphet a számára szükséges funkcióhoz, ami tovább viszi az alkalmazásban vagy weboldalon.</li>
+            <li><strong>Együttműködők:</strong> GUI</li>
+            <li><strong>Dátum:</strong> DateTime.Now</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Név</th>
+                    <th>Típus</th>
+                    <th>Leírás / Működés</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>open_bejelentkezes</td>
+                    <td>-</td>
+                    <td>Bejelentkezés manager megnyitása</td>
+                </tr>
+                <tr>
+                    <td>get_current_date</td>
+                    <td>-</td>
+                    <td>Aktuális dátum lekérése</td>
+                </tr>
+                <tr>
+                    <td>open_hirek</td>
+                    <td>-</td>
+                    <td>Hírek megnyitása</td>
+                </tr>
+                <tr>
+                    <td>open_frissitesek</td>
+                    <td>-</td>
+                    <td>Frissítések megnyitása</td>
+                </tr>
+                <tr>
+                    <td>open_support</td>
+                    <td>-</td>
+                    <td>Segítség felület megnyitása</td>
+                </tr>
+                <tr>
+                    <td>open_nyelv</td>
+                    <td>-</td>
+                    <td>Nyelvválasztás megnyitása</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>4.2 Support</h2>
+        <ul>
+            <li><strong>Felelőssége, feladata:</strong> Üzenetet küldhet a felhasználó segítségkérés céljából az
+                alkalmazáson belül.</li>
+            <li><strong>Együttműködők:</strong> Kezdőlap</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Név</th>
+                    <th>Típus</th>
+                    <th>Leírás / Működés</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>help_email</td>
+                    <td>string</td>
+                    <td>Segítséget nyújtó email cím</td>
+                </tr>
+                <tr>
+                    <td>get_string</td>
+                    <td>string</td>
+                    <td>A segítséget kérő üzenet megtekintése</td>
+                </tr>
+                <tr>
+                    <td>foward_string</td>
+                    <td>string</td>
+                    <td>Üzenet továbbítása</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>4.3 Frissítések</h2>
+        <ul>
+            <li><strong>Felelőssége, feladata:</strong> Az alkalmazás naprakészen tartása.</li>
+            <li><strong>Együttműködők:</strong> Kezdőlap</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Név</th>
+                    <th>Típus</th>
+                    <th>Leírás / Működés</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>patch_notes</td>
+                    <td>string</td>
+                    <td>Frissítések, módosítások közlése</td>
+                </tr>
+                <tr>
+                    <td>get_patchnotes</td>
+                    <td>-</td>
+                    <td>Patchnotes-ok megtekintése</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>4.4 Hírek</h2>
+        <ul>
+            <li><strong>Felelőssége, feladata:</strong> Lekéri az aktuális híreket az internetről (csapatok,
+                mérkőzések).</li>
+            <li><strong>Együttműködők:</strong> Kezdőlap</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Név</th>
+                    <th>Típus</th>
+                    <th>Leírás / Működés</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>hirek</td>
+                    <td>string</td>
+                    <td>Hírek megtekintése</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>4.5 Nyelv</h2>
+        <ul>
+            <li><strong>Felelőssége, feladata:</strong> Az alkalmazás nyelvének módosítása</li>
+            <li><strong>Együttműködők:</strong> Kezdőlap</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Név</th>
+                    <th>Típus</th>
+                    <th>Leírás / Működés</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>nyelv</td>
+                    <td>string</td>
+                    <td>Különböző nyelvek és fordítások</td>
+                </tr>
+                <tr>
+                    <td>set_nyelv</td>
+                    <td>-</td>
+                    <td>Kívánt nyelv beállítása</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>4.6 Bejelentkezés</h2>
+        <ul>
+            <li><strong>Felelőssége, feladata:</strong> A felhasználónak be kell jelentkeznie az alkalmazás
+                használatához.</li>
+            <li><strong>Együttműködők:</strong> Kezdőlap, Regisztráció, Meccscenter</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Név</th>
+                    <th>Típus</th>
+                    <th>Leírás / Működés</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>felhasznalonev</td>
+                    <td>string</td>
+                    <td>Bejelentkezési felhasználónév</td>
+                </tr>
+                <tr>
+                    <td>jelszo</td>
+                    <td>string</td>
+                    <td>Bejelentkezési jelszó</td>
+                </tr>
+                <tr>
+                    <td>get_felhasznalonev</td>
+                    <td>string</td>
+                    <td>Felhasználónév megadása</td>
+                </tr>
+                <tr>
+                    <td>get_jelszo</td>
+                    <td>string</td>
+                    <td>Jelszó megadása</td>
+                </tr>
+                <tr>
+                    <td>open_regisztracio</td>
+                    <td>regisztráció manager</td>
+                    <td>Regisztráció megnyitása</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>4.7 Regisztráció</h2>
+        <ul>
+            <li><strong>Felelőssége, feladata:</strong> Új felhasználó felvitele az adatbázisba, ha még nem regisztrált.
+            </li>
+            <li><strong>Együttműködők:</strong> Bejelentkezés</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Név</th>
+                    <th>Típus</th>
+                    <th>Leírás / Működés</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>e-mail</td>
+                    <td>string</td>
+                    <td>Email cím</td>
+                </tr>
+                <tr>
+                    <td>felhasznalonev</td>
+                    <td>string</td>
+                    <td>Felhasználónév</td>
+                </tr>
+                <tr>
+                    <td>jelszo</td>
+                    <td>string</td>
+                    <td>Jelszó</td>
+                </tr>
+                <tr>
+                    <td>set_email</td>
+                    <td>string</td>
+                    <td>Email megadása</td>
+                </tr>
+                <tr>
+                    <td>set_felhasznalonev</td>
+                    <td>string</td>
+                    <td>Felhasználónév megadása</td>
+                </tr>
+                <tr>
+                    <td>set_jelszo</td>
+                    <td>string</td>
+                    <td>Jelszó megadása</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>4.8 Meccscenter</h2>
+        <img src="meccscenter.png" style="width: 100%;">
+
+        <ul>
+            <li><strong>Felelőssége, feladata:</strong> Funkciók összefogása, navigációs szerep</li>
+            <li><strong>Együttműködők:</strong> Bejelentkezés, Videó, Mérkőzés, Csapat, Eredmény, Értékelés, Elemzés,
+                Oktató videó, Személyes beállítások</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Név</th>
+                    <th>Típus</th>
+                    <th>Leírás / Működés</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>open_merkozes()</td>
+                    <td>-</td>
+                    <td>Mérkőzések almenü megnyitása</td>
+                </tr>
+                <tr>
+                    <td>open_eredmeny()</td>
+                    <td>-</td>
+                    <td>Eredmények almenü megnyitása</td>
+                </tr>
+                <tr>
+                    <td>open_csapat()</td>
+                    <td>-</td>
+                    <td>Csapatok almenü megnyitása</td>
+                </tr>
+                <tr>
+                    <td>open_elemzes()</td>
+                    <td>-</td>
+                    <td>Elemzések almenü megnyitása</td>
+                </tr>
+                <tr>
+                    <td>open_video()</td>
+                    <td>-</td>
+                    <td>Videók almenü megnyitása</td>
+                </tr>
+                <tr>
+                    <td>open_oktatovideo()</td>
+                    <td>-</td>
+                    <td>Oktatóvideók megnyitása</td>
+                </tr>
+                <tr>
+                    <td>open_beallitasok()</td>
+                    <td>-</td>
+                    <td>Beállítások almenü megnyitása</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>4.9 Mérkőzés</h2>
+        <ul>
+            <li><strong>Felelőssége, feladata:</strong> A felhasználó meg tudja nézni a mérkőzéseket</li>
+            <li><strong>Együttműködők:</strong> Meccscenter</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Név</th>
+                    <th>Típus</th>
+                    <th>Leírás / Működés</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>adatok</td>
+                    <td>string</td>
+                    <td>Mérkőzés adatait tárolja</td>
+                </tr>
+                <tr>
+                    <td>get_merkozes()</td>
+                    <td>string</td>
+                    <td>Mérkőzés adatainak betöltése, megtekintése</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>4.10 Csapat</h2>
+        <ul>
+            <li><strong>Felelőssége, feladata:</strong> A felhasználó meg tudja nézni a csapatokat</li>
+            <li><strong>Együttműködők:</strong> Meccscenter</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Név</th>
+                    <th>Típus</th>
+                    <th>Leírás / Működés</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>adatok</td>
+                    <td>string</td>
+                    <td>Csapat adatait tárolja</td>
+                </tr>
+                <tr>
+                    <td>get_csapat_nev</td>
+                    <td>string</td>
+                    <td>Csapat nevének betöltése, megtekintése</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>4.11 Eredmény</h2>
+        <ul>
+            <li><strong>Felelőssége, feladata:</strong> A felhasználó megtudja nézni a mérkőzések eredményeit</li>
+            <li><strong>Együttműködők:</strong> Meccscenter</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Név</th>
+                    <th>Típus</th>
+                    <th>Leírás / Működés</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>adatok</td>
+                    <td>string, int</td>
+                    <td>Eredmények adatokat tárol</td>
+                </tr>
+                <tr>
+                    <td>get_csapat_nev()</td>
+                    <td>string</td>
+                    <td>Csapat nevek betöltése, megtekintése</td>
+                </tr>
+                <tr>
+                    <td>get_eredmeny</td>
+                    <td>int</td>
+                    <td>Mérkőzések eredményeinek betöltése, megtekintése</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>4.12 Értékelés</h2>
+        <ul>
+            <li><strong>Felelőssége, feladata:</strong> Felület, ahol a felhasználó tudja értékelni az adott csapatot,
+                játékost, bírót</li>
+            <li><strong>Együttműködők:</strong> Meccscenter</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Név</th>
+                    <th>Típus</th>
+                    <th>Leírás / Működés</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>adatok</td>
+                    <td>string</td>
+                    <td>Értékelés adatokat tárol</td>
+                </tr>
+                <tr>
+                    <td>get_ertekeles()</td>
+                    <td>string</td>
+                    <td>Értékelések betöltése, megtekintése</td>
+                </tr>
+                <tr>
+                    <td>set_menojhematch</td>
+                    <td>string</td>
+                    <td>Mérkőzés legjobbjának megadása</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>4.13 Elemzés</h2>
+        <ul>
+            <li><strong>Felelőssége, feladata:</strong> Felület, ahol a felhasználó meg tudja nézni az elemzést</li>
+            <li><strong>Együttműködők:</strong> Meccscenter</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Név</th>
+                    <th>Típus</th>
+                    <th>Leírás / Működés</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>adatok</td>
+                    <td>string</td>
+                    <td>Elemzés adatokat tárol</td>
+                </tr>
+                <tr>
+                    <td>get_elemzes()</td>
+                    <td>string</td>
+                    <td>Elemzések betöltése, megtekintése</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>4.14 Személyes beállítások</h2>
+        <ul>
+            <li><strong>Felelőssége, feladata:</strong> Felület, ahol a felhasználó módosíthatja személyes beállításait
+            </li>
+            <li><strong>Együttműködők:</strong> Meccscenter</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Név</th>
+                    <th>Típus</th>
+                    <th>Leírás / Működés</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>jelszo_modositas</td>
+                    <td>string</td>
+                    <td>Jelszó módosítási lehetőség</td>
+                </tr>
+                <tr>
+                    <td>e-mail_modositas</td>
+                    <td>string</td>
+                    <td>Email módosítási lehetőség</td>
+                </tr>
+                <tr>
+                    <td>ertesites_kezeles</td>
+                    <td>string</td>
+                    <td>Értesítések ki/be kapcsolása</td>
+                </tr>
+                <tr>
+                    <td>set_uj_jelszo()</td>
+                    <td>string</td>
+                    <td>Felhasználó beállíthatja a jelszót</td>
+                </tr>
+                <tr>
+                    <td>set_uj_email()</td>
+                    <td>string</td>
+                    <td>Felhasználó beállíthatja az email címet</td>
+                </tr>
+                <tr>
+                    <td>set_ertesites()</td>
+                    <td>string</td>
+                    <td>Felhasználó beállíthatja az értesítést</td>
+                </tr>
+                <tr>
+                    <td>set_livescore()</td>
+                    <td>string</td>
+                    <td>Felhasználó beállíthatja a LiveScore funkciót</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>4.15 Oktató videók</h2>
+        <ul>
+            <li><strong>Felelőssége, feladata:</strong> A felhasználó megtudja nézni az oktató videókat</li>
+            <li><strong>Együttműködők:</strong> Meccscenter</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Név</th>
+                    <th>Típus</th>
+                    <th>Leírás / Működés</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>adatok</td>
+                    <td>string, mp4</td>
+                    <td>Oktató tartalom</td>
+                </tr>
+                <tr>
+                    <td>get_oktatovideo()</td>
+                    <td>mp4</td>
+                    <td>Oktató videó megtekintése</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="card">
+
+        <h2>5. Videó</h2>
+        <ul>
+            <li><strong>Felelőssége, feladata:</strong> Videó feltöltése és megtekintése</li>
+            <li><strong>Együttműködők:</strong> Meccscenter</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Név</th>
+                    <th>Típus</th>
+                    <th>Leírás / Működés</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>adatok</td>
+                    <td>mp4</td>
+                    <td>Videó</td>
+                </tr>
+                <tr>
+                    <td>get_video()</td>
+                    <td>mp4</td>
+                    <td>Videó megtekintése</td>
+                </tr>
+                <tr>
+                    <td>set_video()</td>
+                    <td>mp4</td>
+                    <td>Videó feltöltése, beállítása</td>
+                </tr>
+                <tr>
+                    <td>forward_video()</td>
+                    <td>mp4</td>
+                    <td>Továbbítja a videót</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>5.1 Filekezelés</h2>
+        <ul>
+            <li><strong>Felelőssége, feladata:</strong> Fájlok kezelése és továbbítása</li>
+            <li><strong>Együttműködők:</strong> Videó és Meccscenter</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Név</th>
+                    <th>Típus</th>
+                    <th>Leírás / Működés</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>videoID</td>
+                    <td>int</td>
+                    <td>Videó azonosítója</td>
+                </tr>
+                <tr>
+                    <td>get_video()</td>
+                    <td>mp4</td>
+                    <td>Videó megtekintése</td>
+                </tr>
+                <tr>
+                    <td>forward_video()</td>
+                    <td>mp4</td>
+                    <td>Továbbítja a videót</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>5.2 Cloud</h2>
+        <ul>
+            <li><strong>Felelőssége, feladata:</strong> Videó feldolgozása és továbbítása</li>
+            <li><strong>Együttműködők:</strong> Filekezelés, Videó és Meccscenter</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Név</th>
+                    <th>Típus</th>
+                    <th>Leírás / Működés</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>compressed_video()</td>
+                    <td>AVI</td>
+                    <td>Tömörített videó</td>
+                </tr>
+                <tr>
+                    <td>forward_result()</td>
+                    <td>AVI</td>
+                    <td>Továbbítja a tömörített videót</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>5.3 Result</h2>
+        <ul>
+            <li><strong>Felelőssége, feladata:</strong> Megkapja és továbbítja a tömörített videót</li>
+            <li><strong>Együttműködők:</strong> Cloud, Filekezelés, Videó és Meccscenter</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Név</th>
+                    <th>Típus</th>
+                    <th>Leírás / Működés</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>adatok</td>
+                    <td>AVI</td>
+                    <td>Tömörített videó</td>
+                </tr>
+                <tr>
+                    <td>get_result()</td>
+                    <td>AVI</td>
+                    <td>Megkapja a tömörített videót</td>
+                </tr>
+                <tr>
+                    <td>forward_result()</td>
+                    <td>AVI</td>
+                    <td>Továbbítja a tömörített videót</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+
+        <div class="card">
+
+        <h2>6. Hálózat</h2>
+        <p>A rendszer működéséhez elengedhetetlen az internet hálózat. Az alkalmazások hálózata lehetővé teszi az
+            alkalmazások, szolgáltatások és eszközök közötti kommunikációt és együttműködést. Az alkalmazások különböző
+            eszközökön futnak, például számítógépeken, okostelefonokon, és a hálózat segítségével kapcsolódnak
+            egymáshoz.</p>
+        <img src="hálózat.png" style="width: 100%;">
+
+    </div>
+
+</body>
