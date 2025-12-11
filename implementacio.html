@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New-Era Alkalmazás Dokumentáció</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 40px auto;
+            line-height: 1.6;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #333;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+<h2>App.cs</h2>
+<pre>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+class App {
+    private bool isConnecter;
+
+    public initApplication(){
+    }
+
+    public checkNetworkConnection(){
+    }
+
+    public saveAndExit(){
+    }
+}
+</pre>
+</div>
+
+<div class="card">
+<h2>KezdoLap.cs</h2>
+<pre>
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data; 
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+
+class KezdoLap {
+    public open_bejelentkezes(){ }
+    public open_hirek(){ }
+    public open_frissitesek(){ }
+    public open_support(){ }
+    public open_nyelv(){ 
+        public get_current_date(){ }
+    }
+}
+</pre>
+</div>
+
+<div class="card">
+<h2>Support.cs</h2>
+<pre>
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+
+class Support {
+    private string help_e-mail;
+
+    get_string(){ }
+    forward_string(){ }
+}
+</pre>
+</div>
+
+<div class="card">
+<h2>Frissitesek.cs</h2>
+<pre>
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+
+class Frissitesek {
+    private string patch_notes;
+    get_patchnotes(){ }
+}
+</pre>
+</div>
+
+<div class="card">
+<h2>Hirek.cs</h2>
+<pre>
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+
+class Hirek {
+    private string hirek;
+    get_hirek(){ }
+}
+</pre>
+</div>
+
+<div class="card">
+<h2>Nyelv.cs</h2>
+<pre>
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+
+class Nyelv {
+    private string nyelv;
+    set_nyelv(){ }
+}
+</pre>
+</div>
+
+<div class="card">
+<h2>Bejelentkezes.cs</h2>
+<pre>
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+
+class Bejelentkezes {
+    private string felhasznalonev;
+    private string jelszo;
+
+    get_felhasznalonev(){ }
+    get_jelszo(){ }
+    public open_regisztracio(){ }
+}
+</pre>
+</div>
+
+<div class="card">
+<h2>Regisztracio.cs</h2>
+<pre>
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+
+class Regisztracio {
+    private string felhasznalonev;
+    private string jelszo;
+    private string e-mail;
+
+    set_felhasznalonev(){ }
+    set_jelszo(){ }
+    set_e-mail(){ }
+}
+</pre>
+</div>
+
+<div class="card">
+<h2>Meccscenter.cs</h2>
+<pre>
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+
+class Meccscenter {
+    open_merkozes(){ }
+    open_eredmeny(){ }
+    open_csapat(){ }
+    open_elemzes(){ }
+    open_ertekeles(){ }
+    open_video(){ }
+    open_oktatovideo(){ }
+    open_beallitasok(){ }
+}
+</pre>
+</div>
+
+<div class="card">
+<h2>Merkozes.cs</h2>
+<pre>
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+
+class Merkozes {
+    private string adatok;
+    get_merkozes(){ }
+}
+</pre>
+</div>
+
+<div class="card">
+<h2>Csapat.cs</h2>
+<pre>
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+
+class Csapat {
+    private string adatok;
+    get_csapat_nev(){ }
+}
+</pre>
+</div>
+
+<div class="card">
+<h2>Eredmeny.cs</h2>
+<pre>
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+
+class Eredmeny {
+    private string adatok;
+    private int adatok;
+    get_csapat_nev(){ }
+    get_eredemeny(){ }
+}
+</pre>
+</div>
+
+<div class="card">
+<h2>Ertekeles.cs</h2>
+<pre>
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+
+class Ertekeles {
+    private string adatok;
+    get_ertekeles(){ }
+    set_manofthematch(){ }
+}
+</pre>
+</div>
+
+<div class="card">
+<h2>Elemzes.cs</h2>
+<pre>
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+
+class Elemzes {
+    private string adatok;
+    get_elemzes(){ }
+}
+</pre>
+</div>
+
+<div class="card">
+<h2>Oktatovideo.cs</h2>
+<pre>
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+
+class Oktatovideo {
+    private string adatok;
+    get_oktatovideo(){ }
+}
+</pre>
+</div>
+
+<div class="card">
+<h2>Video.cs</h2>
+<pre>
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+
+class Video {
+    video: MP4;
+    get_video(){ }
+    set_video(){ }
+    forward_video(){ }
+}
+</pre>
+</div>
+
+<div class="card">
+<h2>Filekezeles.cs</h2>
+<pre>
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+
+class Filekezeles {
+    private int videoID;
+    get_video(){ }
+    forward_video(){ }
+}
+</pre>
+</div>
+
+<div class="card">
+<h2>Cloud.cs</h2>
+<pre>
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+
+class Cloud {
+    compressed_video(){ }
+    forward_result(){ }
+}
+</pre>
+</div>
+
+<div class="card">
+<h2>Result.cs</h2>
+<pre>
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+
+class Result {
+    result: MP4(tomoritve);
+    get_result(){ }
+    forward_result(){ }
+}
+</pre>
+</div>
+</body>
